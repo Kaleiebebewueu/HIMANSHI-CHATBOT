@@ -20,7 +20,7 @@ from PRATIBHA.modules.helpers import (
 )
 
 
-@dev.on_message(filters.command(["start", "aistart"]) & ~filters.bot)
+@dev.on_message(filters.command(["issstart", "issaistart"]) & ~filters.bot)
 async def start(_, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         accha = await m.reply_text(
@@ -43,7 +43,7 @@ async def start(_, m: Message):
             reply_markup=InlineKeyboardMarkup(DEV_OP),
         )
 
-@dev.on_message(filters.command(["help"], prefixes=["/"]))
+@dev.on_message(filters.command(["isshelp"], prefixes=["/"]))
 async def help(client: SACHIN, m: Message):
     if m.chat.type == ChatType.PRIVATE:
         hmm = await m.reply_photo(
@@ -53,7 +53,7 @@ async def help(client: SACHIN, m: Message):
         )
 
 
-@dev.on_message(filters.command("repo") & ~filters.bot)
+@dev.on_message(filters.command("issrepo") & ~filters.bot)
 async def repo(_, m: Message):
     await m.reply_text(
         text= f"""**❖ ᴀᴀ ɢʏᴀ ʀᴇᴘᴏ ʟᴇɴᴇ ʙᴏsᴅᴋ, ʏᴇ ᴠɪᴅᴇᴏ ᴅᴇᴋʜ ᴀᴜʀ ᴀᴘɴɪ ʀᴇᴘᴏ ʟᴇɴᴇ ᴋɪ ᴀᴀɢ ʙʜᴜᴊʜᴀ.**\n\n❖ https://x-hd.video/video/-aubree-valentine-switch-roles-fta-reality-kings.html """,
